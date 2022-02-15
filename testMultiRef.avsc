@@ -1,6 +1,7 @@
 {
   "type": "record",
   "fields": [
+    "type": "record",
     {"name": "name", "type": "string", "example": "Donkey"},
     {"name": "age", "type": ["null", "int"], "default": null},
     {
