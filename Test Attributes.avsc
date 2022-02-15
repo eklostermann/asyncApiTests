@@ -1,7 +1,7 @@
 {
   "name": "Person",
   "namespace": "com.company",
-  "type": "object",
+  "type": "record",
   "fields": [
     {"name": "name", "type": "string", "example": "Donkey", "minLength": 0},
     {"name": "serialNo", "type": "string", "minLength": 0, "maxLength": 50},
