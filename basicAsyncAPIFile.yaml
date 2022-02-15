@@ -1,6 +1,6 @@
 asyncapi: 2.3.0
 info:
-  title: My API
+  title: MDD format test
   version: 1.0.0
 channels:
   mychannel:
@@ -8,5 +8,4 @@ channels:
       message:
         schemaFormat: application/vnd.apache.avro+yaml;version=1.9.0
         payload:
-          $ref: >-
-            https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD.avsc
+          $ref: 'https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD.avsc'
