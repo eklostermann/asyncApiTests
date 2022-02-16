@@ -202,7 +202,8 @@ components:
             type: string
             description: blablabla
             longLabel: SVT_Tracking/Sent/Notification/TriggerType
-            example: "$message.name"
+            example:
+              location: $message.name
           vlola:
             type: number
             format: double
