@@ -1,6 +1,6 @@
 info:
   title: MDD data for DCM
-  version: 1.0.0
+  version: 0.2.16
   description: This file is the data list from MDD for DCM usage purpose
 components:
   schemas:
