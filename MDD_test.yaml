@@ -3,6 +3,7 @@ info:
   version: 1.0.0
   description: This file is the data list from MDD for DCM usage purpose
 components:
+  schemas:
     RemoteServiceSetting:
       ApplicationHeader:
         type: object
