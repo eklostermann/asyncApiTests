@@ -7,13 +7,14 @@ components:
     MDD_list:
       type: object
       properties:
-        TS:
+        timeStamp:
           type: string
           format: date-time
           description: UTC of data collection in the vehicle
-        svttt:
+        SVTTriggerType:
           type: string
           description: blablabla
           longLabel: SVT_Tracking/Sent/Notification/TriggerType
+          repository_short_label: svttt
           example: JourneyStart
 
