@@ -3,59 +3,6 @@ info:
   title: Stolen Vehicle Tracking
   version: 1.0.0
   description: This service is in charge of track the vehicle
-servers:
-  vNext:
-    url: test
-    protocol: mqtt
-channels:
-  devices/{deviceId}/messages/events/urgnotif:
-    parameters:
-      deviceId:
-        description: unique device identifier
-        schema:
-          type: string
-          examples:
-            - 2018000453535
-    publish:
-      bindings:
-        mqtt: qos:1 retain:false
-      message:
-        name: SVTTracking
-        payload:
-          type: object
-          additionalProperties: false
-          properties:
-            ApplicationHeader:
-              $ref: '#/components/schemas/RemoteNotification/ApplicationHeader'
-            ApplicationData:
-              $ref: '#/components/schemas/SVTTracking/payload'
-          required:
-            - ApplicationHeader
-            - ApplicationData
-  devices/{deviceId}/messages/devicebound/#:
-    parameters:
-      deviceId:
-        description: unique device identifier
-        schema:
-          type: string
-          examples:
-            - 2018000453535
-    subscribe:
-      bindings:
-        mqtt: qos:1 retain:false
-      message:
-        name: SVTSetting
-        payload:
-          type: object
-          additionalProperties: false
-          properties:
-            ApplicationHeader:
-              $ref: '#/components/schemas/RemoteServiceSetting/ApplicationHeader'
-            ApplicationData:
-              $ref: '#/components/schemas/SVTSettings/payload'
-          required:
-            - ApplicationHeader
-            - ApplicationData
 components:
   schemas:
     RemoteNotification:
