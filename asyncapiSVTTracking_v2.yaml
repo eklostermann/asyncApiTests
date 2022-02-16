@@ -149,8 +149,7 @@ components:
             type: string
             description: blablabla
             longLabel: SVT_Tracking/Sent/Notification/TriggerType
-            example:
-              location: $message.name
+            example: JourneyStart
           vlola:
             type: number
             format: double
