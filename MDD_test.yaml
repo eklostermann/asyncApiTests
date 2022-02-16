@@ -4,7 +4,7 @@ info:
   description: This file is the data list from MDD for DCM usage purpose
 components:
   schemas:
-    MDD:
+    MDD_list:
       type: object
       properties:
         TS:
