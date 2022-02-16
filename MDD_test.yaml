@@ -4,17 +4,16 @@ info:
   description: This file is the data list from MDD for DCM usage purpose
 components:
   schemas:
-    SVTTracking:
-      payload:
-        type: object
-        properties:
-          TS:
-            type: string
-            format: date-time
-            description: UTC of data collection in the vehicle
-          svttt:
-            type: string
-            description: blablabla
-            longLabel: SVT_Tracking/Sent/Notification/TriggerType
-            example: JourneyStart
+    MDD:
+      type: object
+      properties:
+        TS:
+          type: string
+          format: date-time
+          description: UTC of data collection in the vehicle
+        svttt:
+          type: string
+          description: blablabla
+          longLabel: SVT_Tracking/Sent/Notification/TriggerType
+          example: JourneyStart
 
