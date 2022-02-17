@@ -28,8 +28,7 @@ components:
           Source_data_label: Vehicle/Location/Longitude
           Repository_short_label: vlolo
         LastKnownlocationaltitude:
-          type: number
-          format: integer
+          type: integer
           minimum: -20000
           maximum: 20000
           Source_data_label: Vehicle/Location/Altitude
@@ -37,7 +36,7 @@ components:
         DiagReceivedBCM:
           type: string
           binaryEncoding: base64
-          Source_data_label: Vehicle/Location/Altitude
+          Source_data_label: DiagFrame/Received/BCM
           Repository_short_label: diarbvm
         SpeedDisplayedValueinkmh:
           type: number
@@ -56,3 +55,14 @@ components:
           enum: [0,1,2,3,4,5,6,7,8,9]
           Source_data_label: Internal/StateManager/CurrentState
           Repository_short_label: vcsmc
+        VehicleReceivedHVAC_PresoakTimeStamp:
+          type: string
+          format: date-time
+          Source_data_label: Vehicle/Received/HVAC/Presoak/TimeStamp
+          Repository_short_label: hpts
+        SRP_LoginStatus:
+          type: string
+          format: boolean
+          symbols: ["KO","OK"]
+          Source_data_label: SRP/Login/Status
+          Repository_short_label: hpts
