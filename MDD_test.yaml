@@ -51,3 +51,8 @@ components:
           format: boolean
           Source_data_label: Vehicle/Location/Latitude Mode
           Repository_short_label: lamo
+        AIVC_StateManagerCurrent:
+          type: integer
+          enum: [0,1,2,3,4,5,6,7,8,9]
+          Source_data_label: Internal/StateManager/CurrentState
+          Repository_short_label: vcsmc
