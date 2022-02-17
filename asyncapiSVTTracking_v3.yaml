@@ -59,7 +59,9 @@ components:
         type: object
         properties:
           timeStamp:
-            $ref: 'https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD_test.yaml#/components/schemas/MDD_list/properties/timeStamp'
+            type: string
+            format: date-time
+            description: UTC of data collection in the vehicle
           SVTTriggerType:
             $ref: 'https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD_test.yaml#/components/schemas/MDD_list/properties/SVTTriggerType'
           vlola:
