@@ -7,14 +7,38 @@ components:
     MDD_list:
       type: object
       properties:
-        timeStamp:
-          type: string
-          format: date-time
-          description: UTC of data collection in the vehicle
         SVTTriggerType:
           type: string
-          description: blablabla
-          longLabel: SVT_Tracking/Sent/Notification/TriggerType
-          repository_short_label: svttt
+          symbols: ("JourneyStart","JourneyStop","OnRequest","Periodic")
+          Source_data_label: SVT_Tracking/Sent/Notification/TriggerType
+          Repository_short_label: svttt
           example: JourneyStart
-
+        LocationLatitude:
+          type: number
+          format: double
+          minimum: -90
+          maximum: 90
+          Source_data_label: Vehicle/Location/Latitude
+          Repository_short_label: vlola
+          example: 40.745489
+        LocationLongitude:
+          type: number
+          format: double
+          minimum: -180
+          maximum: 180
+          Source_data_label: Vehicle/Location/Longitude
+          Repository_short_label: vlolo
+          example: -123.4589758
+        LastKnownlocationaltitude:
+          type: number
+          format: integer
+          minimum: -20000
+          maximum: 20000
+          Source_data_label: Vehicle/Location/Altitude
+          Repository_short_label: lkal
+          example: 1563
+        DiagReceivedBCM:
+          type: string
+          binaryEncoding: base64
+          Source_data_label: Vehicle/Location/Altitude
+          Repository_short_label: diarbvm
