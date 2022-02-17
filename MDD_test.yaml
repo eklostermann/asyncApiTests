@@ -20,7 +20,6 @@ components:
           maximum: 90
           Source_data_label: Vehicle/Location/Latitude
           Repository_short_label: vlola
-          example: 40.745489
         LocationLongitude:
           type: number
           format: double
@@ -28,7 +27,6 @@ components:
           maximum: 180
           Source_data_label: Vehicle/Location/Longitude
           Repository_short_label: vlolo
-          example: -123.4589758
         LastKnownlocationaltitude:
           type: number
           format: integer
@@ -36,9 +34,20 @@ components:
           maximum: 20000
           Source_data_label: Vehicle/Location/Altitude
           Repository_short_label: lkal
-          example: 1563
         DiagReceivedBCM:
           type: string
           binaryEncoding: base64
           Source_data_label: Vehicle/Location/Altitude
           Repository_short_label: diarbvm
+        SpeedDisplayedValueinkmh:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 409.4
+          Source_data_label: Vehicle/Received/Speed/Displayed/Valueinkmh
+          Repository_short_label: sdvk
+        LatitudeMode:
+          type: integer
+          format: boolean
+          Source_data_label: Vehicle/Location/Latitude Mode
+          Repository_short_label: lamo
