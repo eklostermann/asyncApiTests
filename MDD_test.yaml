@@ -9,7 +9,7 @@ components:
       properties:
         SVTTriggerType:
           type: string
-          symbols: ("JourneyStart","JourneyStop","OnRequest","Periodic")
+          symbols: ["JourneyStart","JourneyStop","OnRequest","Periodic"]
           Source_data_label: SVT_Tracking/Sent/Notification/TriggerType
           Repository_short_label: svttt
           example: JourneyStart
