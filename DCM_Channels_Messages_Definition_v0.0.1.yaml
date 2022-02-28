@@ -1,0 +1,56 @@
+asyncapi: 2.3.0
+info:
+  title: DCM Channels Messages Definition
+  version: 0.0.1
+  description: List of messages of each channel (topic MQTT) used by DCM.
+channels:
+  'devices/{deviceId}/messages/events/urgnotif':
+    parameters:
+      deviceId:
+        description: unique device identifier
+        schema:
+          type: string
+          examples:
+            - 2018000453535
+    publish:
+      bindings:
+        mqtt: 'qos:1 retain:false'
+      message:
+        name: SVTTracking
+        payload:
+          type: object
+          additionalProperties: false
+          properties:
+            ApplicationHeader:
+              $ref: >-
+                https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/DCM_Header_schema.yaml#/components/schemas/SVTTracking/header
+            ApplicationData:
+              $ref: 'https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/Stolen_Vehicle_Tracking_Messages_v0.0.1.yaml#/components/schemas/SVTTracking/payload'
+          required:
+            - ApplicationHeader
+            - ApplicationData
+  'devices/{deviceId}/messages/devicebound/#':
+    parameters:
+      deviceId:
+        description: unique device identifier
+        schema:
+          type: string
+          examples:
+            - 2018000453535
+    subscribe:
+      bindings:
+        mqtt: 'qos:1 retain:false'
+      message:
+        name: SVTSetting
+        payload:
+          type: object
+          additionalProperties: false
+          properties:
+            ApplicationHeader:
+              $ref: >-
+                https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/DCM_Header_schema.yaml#/components/schemas/SVTSettings/header
+            ApplicationData:
+              $ref: 'https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/Stolen_Vehicle_Tracking_Messages_v0.0.1.yaml#/components/schemas/SVTSettings/payload'
+          required:
+            - ApplicationHeader
+            - ApplicationData
