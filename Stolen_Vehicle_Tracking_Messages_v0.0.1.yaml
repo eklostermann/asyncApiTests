@@ -18,7 +18,7 @@ components:
               https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD_data.yaml#/components/schemas/MDD_list/properties/SVTTriggerType
           LocationLatitude:
             $ref: >-
-              https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD_data.yaml#/components/schemas/MDD_list/properties/LocationLatitude
+              MDD_data.yaml#/components/schemas/MDD_list/properties/LocationLatitude
           vlolo:
             type: number
             format: double
