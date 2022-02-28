@@ -12,13 +12,11 @@ components:
           symbols: ["JourneyStart","JourneyStop","OnRequest","Periodic"]
           Source_data_label: SVT_Tracking/Sent/Notification/TriggerType
           Repository_short_label: svttt
-          example: JourneyStart
         LocationLatitude:
           type: number
           format: double
           minimum: -90
           maximum: 90
-          example: 45
           Source_data_label: Vehicle/Location/Latitude
           Repository_short_label: vlola
         LocationLongitude:
