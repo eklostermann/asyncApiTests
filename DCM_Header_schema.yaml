@@ -86,7 +86,7 @@ components:
       required:
         - MessageType
     RemoteNotification:
-      SVTTracking:
+      RemoteNotification_SVTTracking:
         header:
           allOf:
             - $ref: '#/components/schemas/RemoteNotificationHeader'
@@ -98,15 +98,16 @@ components:
                   - SVTTracking
           required:
             - TargetId
-    SVTSettings:
-      header:
-        allOf:
-          - $ref: '#/components/schemas/RemoteServiceSettingHeader'
-          - type: object
-            properties:
-              TargetId:
-                 type: string
-                 enum:
-                 - SVTSetting
-        required:
-          - TargetId
+    RemoteServiceSetting:
+      RemoteServiceSetting_SVTSettings:
+        header:
+          allOf:
+            - $ref: '#/components/schemas/RemoteServiceSettingHeader'
+            - type: object
+              properties:
+                TargetId:
+                  type: string
+                  enum:
+                  - SVTSetting
+          required:
+            - TargetId
