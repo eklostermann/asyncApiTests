@@ -42,7 +42,7 @@ components:
             format: float
             description: blablabla
             longLabel: Vehicle/Received/Speed/Displayed/Valueinkmh
-            example: 75
+            example: 60
           vehs:
             type: number
             format: integer
