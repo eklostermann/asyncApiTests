@@ -62,6 +62,6 @@ components:
         SRP_LoginStatus:
           type: string
           format: boolean
-          symbols: ["KO","OK"]
+          symbols: [ "KO","OK" ]
           Source_data_label: SRP/Login/Status
           Repository_short_label: hpts
