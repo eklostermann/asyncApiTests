@@ -24,7 +24,7 @@ components:
             format: double
             description: blablabla
             longLabel: Vehicle/Location/Longitude
-            example: -70.165456
+            example: -99.99
           lkal:
             type: number
             format: integer
