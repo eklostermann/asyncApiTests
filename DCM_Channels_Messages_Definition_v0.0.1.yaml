@@ -16,7 +16,7 @@ channels:
       bindings:
         mqtt: 'qos:1 retain:false'
       message:
-        name: RemoteNotification_SVTTracking
+        name: RemoteNotification/SVTTracking
         payload:
           type: object
           additionalProperties: false
@@ -41,7 +41,7 @@ channels:
       bindings:
         mqtt: 'qos:1 retain:false'
       message:
-        name: RemoteServiceSetting_SVTSettings
+        name: RemoteServiceSetting/SVTSettings
         payload:
           type: object
           additionalProperties: false
