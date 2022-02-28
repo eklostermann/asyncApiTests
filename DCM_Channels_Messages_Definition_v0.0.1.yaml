@@ -49,6 +49,13 @@ channels:
         mqtt: 'qos:1 retain:false'
       message:
         name: RemoteServiceSetting/SVTSettings
+        tags:
+          - name: A-IVC1 SOP1
+          - name: A-IVC1 SOP2
+          - name: A-IVC1 SOP3
+          - name: AIVCKAI SOP1
+          - name: A-IVC2 SOP1
+          - name: A-IVCKAIEVO SOP1
         payload:
           type: object
           additionalProperties: false
