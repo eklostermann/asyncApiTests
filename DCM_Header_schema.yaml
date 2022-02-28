@@ -16,7 +16,7 @@ components:
         DataDictionaryVersion:
           type: string
           example:
-              $ref: 'https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD_test.yaml#/info/version'
+              $ref: 'https://raw.githubusercontent.com/eklostermann/asyncApiTests/main/MDD_data.yaml#/info/version'
           description: Version of the Data Dictionary
         DevId:
           type: string
