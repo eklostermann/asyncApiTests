@@ -85,18 +85,19 @@ components:
                description: Fixed value for RemoteServiceSetting Message
       required:
         - MessageType
-    SVTTracking:
-      header:
-        allOf:
-          - $ref: '#/components/schemas/RemoteNotificationHeader'
-          - type: object
-            properties:
-              TargetId:
-                 type: string
-                 enum:
-                 - SVTTracking
-        required:
-          - TargetId
+    RemoteNotification:
+      SVTTracking:
+        header:
+          allOf:
+            - $ref: '#/components/schemas/RemoteNotificationHeader'
+            - type: object
+              properties:
+                TargetId:
+                  type: string
+                  enum:
+                  - SVTTracking
+          required:
+            - TargetId
     SVTSettings:
       header:
         allOf:
