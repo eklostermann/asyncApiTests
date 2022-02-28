@@ -18,6 +18,7 @@ components:
           format: double
           minimum: -90
           maximum: 90
+          example: 45
           Source_data_label: Vehicle/Location/Latitude
           Repository_short_label: vlola
         LocationLongitude:
