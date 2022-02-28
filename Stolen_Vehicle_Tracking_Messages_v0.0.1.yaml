@@ -1,6 +1,8 @@
 asyncapi: 2.3.0
 info:
   title: Stolen Vehicle Tracking Messages
+  Feature Name: Stolen vehicle tracking (SVT)
+  UID: 9
   version: 0.0.1
   description: Definition of SVT service messages in charge of track the vehicle
 components:
