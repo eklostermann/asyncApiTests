@@ -12,7 +12,7 @@ components:
           example: 2fff6fa91f414229b829e4f612f79a27
           description: >-
             Global message ID is unique ID amoung all message from IVC & IVI
-            to vNext and vice versa
+            to vNext and vice versa.
         DataDictionaryVersion:
           type: string
           example:
