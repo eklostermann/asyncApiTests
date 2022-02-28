@@ -85,6 +85,18 @@ components:
                description: Fixed value for RemoteServiceSetting Message
       required:
         - MessageType
+    RemoteAIVCACKSettingHeader:
+      allOf:
+         - $ref: '#/components/schemas/StandardApplicationHeader'
+         - type: object
+           properties: 
+             MessageType:
+               type: string
+               enum:
+               - RM_AIVC_ACK_PUBLISH_SETTING
+               description: Fixed value for RemoteServiceSetting Message
+      required:
+        - MessageType
     RemoteNotification:
       SVTTracking:
         header:
@@ -109,5 +121,18 @@ components:
                   type: string
                   enum:
                   - SVTSetting
+          required:
+            - TargetId
+    RemoteAIVCACKSetting:
+      SVTTracking:
+        header:
+          allOf:
+            - $ref: '#/components/schemas/RemoteAIVCACKSettingHeader'
+            - type: object
+              properties:
+                TargetId:
+                  type: string
+                  enum:
+                  - SVTTracking
           required:
             - TargetId
