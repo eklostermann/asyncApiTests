@@ -1,0 +1,99 @@
+info:
+  title: DCM_Header_schema
+  version: 1.0.0
+  description: Schema used to build the DCM headers
+components:
+  schemas:
+    StandardApplicationHeader:
+      type: object
+      properties:
+        GlobalMessageID:
+          type: string
+          example: 2fff6fa91f414229b829e4f612f79a27
+          description: >-
+            Global message ID is unique ID amoung all message from IVC & IVI
+            to vNext and vice versa.
+        DataDictionaryVersion:
+          type: string
+          example:
+              $ref: 'MDD_data.yaml#/info/version'
+          description: Version of the Data Dictionary
+        DevId:
+          type: string
+          example: 2018000453535
+          description: A-IVC ID
+        DeviceType:
+          type: string
+          example: A-IVC2
+          description: A-IVC or A-IVI
+        VIN:
+          type: string
+          example: VF1XXXXXXXXXXXXXX
+          description: Vehicle identifier number
+        BIN:
+          type: string
+          example: 1234567890123
+          description: Battery identifier number (Only for services requiring this field)
+        TimeStamp:
+          type: string
+          format: date-time
+          description: UTC of message publication
+        CorrelationId:
+          type: string
+          example: 2fff6fa91f414229b829e4f612f79a27
+          description: Correlation ID with answer message
+        DCMVersion:
+          type: string
+          example: 1.6.9.0
+          description: version of the message spec
+        UserId:
+          type: string
+          example: AllianceUser
+          description: >-
+            User Identifier - is received from AIVI (User ID is not used on
+            CCS2")
+      required:
+        - GlobalMessageId
+        - DataDictionaryVersion
+        - DevId
+        - DeviceType
+        - VIN
+        - TimeStamp
+        - CorrelationId
+        - DCMVersion
+    RemoteNotificationHeader:
+      allOf:
+         - $ref: '#/components/schemas/StandardApplicationHeader'
+         - type: object
+           properties: 
+             MessageType:
+               type: string
+               enum: 
+               - RemoteNotification
+               description: Fixed value for Notification Message
+      required:
+        - MessageType
+    RemoteServiceSettingHeader:
+      allOf:
+         - $ref: '#/components/schemas/StandardApplicationHeader'
+         - type: object
+           properties: 
+             MessageType:
+               type: string
+               enum:
+               - RemoteServiceSetting
+               description: Fixed value for RemoteServiceSetting Message
+      required:
+        - MessageType
+    RemoteAIVCACKSettingHeader:
+      allOf:
+         - $ref: '#/components/schemas/StandardApplicationHeader'
+         - type: object
+           properties: 
+             MessageType:
+               type: string
+               enum:
+               - RM_AIVC_ACK_PUBLISH_SETTING
+               description: Fixed value for RemoteServiceSetting Message
+      required:
+        - MessageType
