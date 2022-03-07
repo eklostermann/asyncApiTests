@@ -50,10 +50,7 @@ components:
               format: Enum Of Integer
               description: blablabla
               longLabel: Vehicle/Location/Validity
-              symbols:
-                - '89'
-                - '91'
-                - '102'
+              enum: [5,7,9]
             sdvk:
               type: number
               format: float
