@@ -46,11 +46,14 @@ components:
               longLabel: Vehicle/Location/Altitude
               example: 1563
             locval:
-              type: number
-              format: integer
+              type: integer
+              format: Enum Of Integer
               description: blablabla
               longLabel: Vehicle/Location/Validity
-              example: 1
+              symbols:
+                - '89'
+                - '91'
+                - '102'
             sdvk:
               type: number
               format: float
